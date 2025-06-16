@@ -1,1 +1,1 @@
-# bstali.github.io
+# https://bstali.github.io/bstali
