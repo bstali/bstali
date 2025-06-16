@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Basit Ali(Software Engineer)</title>
+    <title>Abdul Basit Ali | Software Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
     <link rel="icon" type="image/x-icon" href="/public/assets/Profile.ico" />
@@ -195,15 +195,15 @@
 
         .profile-container {
             position: relative;
-            width: 280px;
-            height: 280px;
+            width: 350px;
+            height: 350px;
             margin: 0 auto;
         }
 
         .profile-ring {
             position: absolute;
             inset: -10px;
-            background: linear-gradient(45deg, #ffd700, #ffed4e, #fff, #ffd700);
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #00000000, #ffd700);
             border-radius: 50%;
             animation: rotate 8s linear infinite;
             padding: 3px;
@@ -707,7 +707,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>React & React Native Developer</h1>
+                    <h1>Software Engineer</h1>
                     <div class="subtitle">Full-Stack Mobile & Web Solutions</div>
                     <p>Specialized in creating cutting-edge applications using React.js, React Native, and modern JavaScript ecosystems. Passionate about delivering exceptional user experiences with clean, scalable code.</p>
                     <div class="cta-buttons">
@@ -723,7 +723,7 @@
                     <div class="profile-container">
                         <div class="profile-ring"></div>
                         <div class="profile-img">
-                            <i class="fas fa-user"></i>
+                            <img src="/public/assets/Profile.jpg" alt="Abdul Basit Ali" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
                 </div>
@@ -787,7 +787,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section section-light">
+    <section id="projects" class="section section-dark">
         <div class="container">
             <h2 class="animate-on-scroll">Featured Projects</h2>
             <div class="projects-carousel animate-on-scroll">
@@ -872,86 +872,20 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section section-light">
-        <div class="container">
-            <h2 class="animate-on-scroll">Let's Work Together</h2>
-            <div class="contact-container animate-on-scroll">
-                <div class="contact-info">
-                    <h3>Ready to bring your ideas to life?</h3>
-                    <p>I'm passionate about creating exceptional digital experiences. Whether you need a mobile app, web application, or want to discuss your next project, I'd love to hear from you.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <strong>Email</strong>
-                                <p>your.email@example.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <strong>Phone</strong>
-                                <p>+92 XXX XXXXXXX</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <strong>Location</strong>
-                                <p>Gujranwala, Punjab, Pakistan</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <strong>Availability</strong>
-                                <p>Available for freelance projects</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <form class="contact-form" onsubmit="handleSubmit(event)">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div id="contact" class="container">
             <h2 class="animate-on-scroll">Let's Work Together</h2>
             
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-            </div>
+    <a href="https://www.linkedin.com/in/bstali/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/bstali" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="mailto:bstali56@gmail.com" class="social-link" target="_blank"><i class="fas fa-envelope"></i></a>
+</div>
             
             <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                <p>&copy; 2025 Your Name. All rights reserved. Built with ❤️ using React ecosystem.</p>
+                <!-- <p>&copy; <span id="currentYear"></span> Abdul Basit Ali. All rights reserved.</p> -->
             </div>
         </div>
     </footer>
@@ -1159,6 +1093,9 @@
         }
         
         window.addEventListener('scroll', requestTick);
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
   
