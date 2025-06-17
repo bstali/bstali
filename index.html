@@ -28,7 +28,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
+            background: linear-gradient(-45deg, #1a1c2c, #2d1b4e, #451952, #662549, #1e3163, #0a2342);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
             z-index: -2;
@@ -203,7 +203,7 @@
         .profile-ring {
             position: absolute;
             inset: -10px;
-            background: linear-gradient(45deg, #ffd700, #ffed4e, #00000000, #ffd700);
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffffff00, #ffd700);
             border-radius: 50%;
             animation: rotate 8s linear infinite;
             padding: 3px;
@@ -396,7 +396,7 @@
 
         .project-header {
             display: flex;
-            align-items: center;
+            align-items: start;
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
@@ -482,12 +482,50 @@
 
         /* Swiper Pagination */
         .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
             background: rgba(255, 255, 255, 0.5);
             opacity: 1;
+            transition: all 0.3s ease;
         }
 
         .swiper-pagination-bullet-active {
             background: #ffd700;
+            transform: scale(1.2);
+        }
+
+        /* Swiper Navigation Buttons */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #ffd700;
+            background: rgba(0, 0, 0, 0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        .swiper-button-disabled {
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
         }
 
         /* Contact Section */
@@ -748,10 +786,10 @@
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
-                    <h3>UI/UX Libraries</h3>
+                    <h3>Design Libraries</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Material UI</span>
-                        <span class="skill-tag">Shadcn/ui</span>
+                        <span class="skill-tag">Shadcn UI</span>
                         <span class="skill-tag">Tailwind CSS</span>
                     </div>
                 </div>
@@ -792,81 +830,12 @@
             <h2 class="animate-on-scroll">Featured Projects</h2>
             <div class="projects-carousel animate-on-scroll">
                 <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="project-header">
-                                <div class="project-icon"><i class="fas fa-video"></i></div>
-                                <div class="project-info">
-                                    <h3>Timewise Tutoring Tool</h3>
-                                    <div class="project-type">Educational Platform</div>
-                                </div>
-                            </div>
-                            <div class="project-description">
-                                Developed the frontend for an advanced tutoring video editor that enables tutors to create high-quality educational content. Features include AI-generated script support, custom voiceovers, background music integration, dynamic captions, and thumbnail customization.
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">React.js</span>
-                                <span class="tech-tag">Redux</span>
-                                <span class="tech-tag">Material UI</span>
-                                <span class="tech-tag">Chart.js</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link link-primary">
-                                    <i class="fas fa-external-link-alt"></i> Visit Website
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="project-header">
-                                <div class="project-icon"><i class="fas fa-robot"></i></div>
-                                <div class="project-info">
-                                    <h3>Accent Assist</h3>
-                                    <div class="project-type">AI Assistant Platform</div>
-                                </div>
-                            </div>
-                            <div class="project-description">
-                                Developed the frontend for an AI-powered organizational tool that enables employees to interact with a custom-trained AI assistant. Implemented features for chat history management, conversation loading, and voice-assisted interactions.
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">React.js</span>
-                                <span class="tech-tag">Redux</span>
-                                <span class="tech-tag">Tailwind CSS</span>
-                                <span class="tech-tag">Firebase</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link link-primary">
-                                    <i class="fas fa-external-link-alt"></i> Visit Website
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="project-header">
-                                <div class="project-icon"><i class="fas fa-battery-full"></i></div>
-                                <div class="project-info">
-                                    <h3>Electrafy Admin + App</h3>
-                                    <div class="project-type">Power Management System</div>
-                                </div>
-                            </div>
-                            <div class="project-description">
-                                Developed the frontend for a UPS and battery management system in both web (Admin) and mobile (React Native) platforms. Implemented dashboards for real-time power monitoring, system configuration, and usage analytics.
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">React.js</span>
-                                <span class="tech-tag">React Native</span>
-                                <span class="tech-tag">Highcharts</span>
-                                <span class="tech-tag">Material UI</span>
-                                <span class="tech-tag">Redux</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link link-primary">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            </div>
-                        </div>
+                    <div class="swiper-wrapper" id="projectsWrapper">
+                        <!-- Projects will be inserted here by JavaScript -->
                     </div>
                     <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </div>
@@ -894,6 +863,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
     
     <script>
+        // Projects data
+        const projects = [
+            {
+                title: "Timewise Tutoring Tool",
+                type: "Educational Platform",
+                icon: "fas fa-video",
+                description: "Developed the frontend for an advanced tutoring video editor that enables tutors to create high-quality educational content. Features include AI-generated script support, custom voiceovers, background music integration, dynamic captions, and thumbnail customization. Empowered tutors to preview and export fully edited videos for download.",
+                tags: ["React.js", "Redux", "Shade CN", "Remotion Player", "Tailwind"]
+            },
+            {
+                title: "OnBoardly",
+                type: "Staff Management Platform",
+                icon: "fas fa-users",
+                description: "Developed a company and staff management platform with role-based permissions, document uploads, email notifications, and staff archiving. Enabled dynamic admin controls for managing companies, venues, and staff with secure authentication.",
+                tags: ["React.js", "Redux", "Material UI", "Node.js", "Firebase"]
+            },
+            {
+                title: "Flower Finder",
+                type: "E-commerce Platform",
+                icon: "fas fa-seedling",
+                description: "Developed the frontend for a dynamic flower listing platform. Built interactive UI components for browsing and purchasing flowers, including detailed views where users can explore each flower's features, symbolic meanings, and emotional impact. Integrated cron-based inventory update handling and a personalized recommendation system.",
+                tags: ["React.js", "Redux", "Tailwind CSS", "Node.js"]
+            },
+            {
+                title: "Yesaal",
+                type: "Service Provider Platform",
+                icon: "fas fa-tools",
+                description: "Built the frontend for a mobile app and admin panel that connects users with local service providers such as plumbers, electricians, and more. Enabled users to browse, book, and manage services through an intuitive interface.",
+                tags: ["React Native", "Redux", "Node.js", "Firebase"],
+                website: "#"
+            },
+            {
+                title: "RealState Freelancer",
+                type: "Property Management System",
+                icon: "fas fa-home",
+                description: "Built the frontend of a role-based property management system using modern React practices. Implemented dynamic interfaces for property listings, reservations, and agent commission tracking.",
+                tags: ["React.js", "Redux", "Material UI", "Node.js"],
+                website: "#"
+            },
+            {
+                title: "Accent Assist",
+                type: "AI Assistant Platform",
+                icon: "fas fa-robot",
+                description: "Developed the frontend for an AI-powered organizational tool that enables employees to interact with a custom-trained AI assistant. Implemented features for viewing and managing chat history, loading previous conversations, and using voice-assisted interactions for hands-free queries.",
+                tags: ["React.js", "Redux", "Firebase", "Node.js"],
+                website: "#"
+            },
+            {
+                title: "Electrafy Admin + App",
+                type: "Power Management System",
+                icon: "fas fa-battery-full",
+                description: "Developed the frontend for a UPS and battery management system in both web (Admin) and mobile (React Native) platforms. Enabled users to monitor real-time power usage, battery status, and energy flow between grid, battery, and load.",
+                tags: ["React Native", "React.js", "Redux", "Highcharts", "Material UI"]
+            }
+        ];
+
         // Initialize particles
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
@@ -921,19 +946,35 @@
             }
         }
 
-        // Initialize Swiper
+        // Initialize Swiper before populating projects
         const swiper = new Swiper('.swiper', {
             loop: true,
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 30,
+            speed: 800,
+            observer: true,
+            observeParents: true,
+            loopFillGroupWithBlank: false,
+            loopAdditionalSlides: 1,
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true,
             },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+                type: 'bullets',
+                dynamicBullets: true,
+                dynamicMainBullets: 3,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
             breakpoints: {
-                640: {
+                320: {
                     slidesPerView: 1,
                     spaceBetween: 20,
                 },
@@ -947,6 +988,39 @@
                 },
             },
         });
+
+        // Modified project population function
+        function populateProjects() {
+            const wrapper = document.getElementById('projectsWrapper');
+            wrapper.innerHTML = ''; // Clear existing content
+            
+            projects.forEach(project => {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                
+                slide.innerHTML = `
+                    <div class="project-header">
+                        <div class="project-icon"><i class="${project.icon}"></i></div>
+                        <div class="project-info">
+                            <h3>${project.title}</h3>
+                            <div class="project-type">${project.type}</div>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        ${project.description}
+                    </div>
+                    <div class="project-tech">
+                        ${project.tags.map(tag => `<span class="tech-tag">${tag}</span>`).join('')}
+                    </div>
+                `;
+                
+                wrapper.appendChild(slide);
+            });
+
+            // Update Swiper after populating slides
+            swiper.update();
+            swiper.slideToLoop(0);
+        }
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1034,6 +1108,7 @@
         // Initialize everything when page loads
         window.addEventListener('load', () => {
             createParticles();
+            populateProjects();
             
             // Add staggered animation to hero elements
             const heroElements = document.querySelectorAll('.hero-text > *');
